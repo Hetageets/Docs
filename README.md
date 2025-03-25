@@ -70,14 +70,6 @@
 | MA-003 | TBD | TBD |
 | MA-004 | TBD | TBD |
 | MA-005 | TBD | TBD |
-| MA-006 | TBD | TBD |
-| MA-007 | TBD | TBD |
-| MA-008 | TBD | TBD |
-| MA-009 | TBD | TBD |
-| MA-010 | TBD | TBD |
-| MA-011 | TBD | TBD |
-| MA-012 | TBD | TBD |
-| MA-013 | TBD | TBD |
 
 ### Համակարգի գծապատկեր
 Համակարգի ճարտարապետության գծապատկեր։
