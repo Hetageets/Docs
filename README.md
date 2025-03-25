@@ -49,8 +49,8 @@
 3. **Արագ արձագանքման խումբ** – Արտակարգ կարգավիճակ ստանալու դեպքում արձագանքող խումբ։
 
 Յուրաքանչյուրի համար սահմանված են առանձնահատուկ գործառույթներ։
-![System Diagram](assets/մասն.png)
-![System Diagram](assets/Վերասհ.png)
+![System Diagram](assets/մասն..png)
+![System Diagram](assets/Վերասհ.jpg)
 ![System Diagram](assets/ախումբ.png)
 
 
