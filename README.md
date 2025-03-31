@@ -72,9 +72,9 @@
 | MA-007 | Սարքից եւ հեռախոսից ստացուած տուեալների համադրում, ըստ ճշտութեան եւ ողարկում սպասարկիչ | S |
 
 * Առաջնահերթութիւնները սահմանուած են համաձայն հետեւեալ աղիւսակի, որը կապում է պահանջը դրա իրականացման համար անհրաժեշտ ռեսուրսը, իրականացման դէպքում ազդեցութիւնը եւ ռիսկերը։
-![image](https://github.com/user-attachments/assets/1b818201-131e-42c0-a224-6a811d915dd5)
+[//]: # (This may be the most platform independent comment ![image](https://github.com/user-attachments/assets/1b818201-131e-42c0-a224-6a811d915dd5))
 
-
+![image(1)](https://github.com/user-attachments/assets/0fd7b3d6-0d8c-4b76-bec0-aff81be5c561)
 
 ### Համակարգի գծապատկեր
 Համակարգի ճարտարապետության գծապատկեր։
@@ -82,6 +82,8 @@
 ![System Diagram](assets/կառռ.png)
 
 ### Սարքի գործառութային պահանջներ
+
+[//]: # (This may be the most platform independent comment)
 
 | Ցուցիչ | Նկարագրություն | Առաջնահերթություն |
 |--------|--------------|----------------|
