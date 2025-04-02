@@ -8,7 +8,7 @@
 [//]: # (Աւելացնել բջջային հեռախոսում կոորդինատների ստացման մասին տեղեկութիւն)
 
 ## Յղումներ
-- 1. [Hrisko, J. (2018). Comparing iPhone GPS Against NEO-6M (GY-GPS6M) GPS Module with Arduino. Maker Portal. h](https://makersportal.com/blog/2018/5/9/comparing-iphone-gps-against-neo-6m-gy-gps6m-gps-module-with-arduino)
+- [\[1\]. Hrisko, J. (2018). Comparing iPhone GPS Against NEO-6M (GY-GPS6M) GPS Module with Arduino. Maker Portal. h](https://makersportal.com/blog/2018/5/9/comparing-iphone-gps-against-neo-6m-gy-gps6m-gps-module-with-arduino)
   
 ## Համակարգի բաղադրիչներ
 
