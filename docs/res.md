@@ -10,7 +10,7 @@
 ## Յղումներ
 \[1.\] [Hrisko, J. (2018). Comparing iPhone GPS Against NEO-6M (GY-GPS6M) GPS Module with Arduino. Maker Portal. h](https://makersportal.com/blog/2018/5/9/comparing-iphone-gps-against-neo-6m-gy-gps6m-gps-module-with-arduino)
 
-\[2.\] 
+\[2.\] [U-blox official web-page (2011). U-blox neo-6M GPS module](https://www.u-blox.com/en/product/neo-6-series)
 
 \[3.\] [Luthfi, Achmad & Karna, Nyoman & Mayasari, Ratna. (2019). Google Maps API Implementation On IOT Platform For Tracking an Object Using GPS. ](https://www.researchgate.net/figure/GPS-accuracy-measurement_fig7_338799149)
 
