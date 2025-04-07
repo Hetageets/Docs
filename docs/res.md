@@ -14,7 +14,7 @@
 
 \[3.\] [Luthfi, Achmad & Karna, Nyoman & Mayasari, Ratna. (2019). Google Maps API Implementation On IOT Platform For Tracking an Object Using GPS. ](https://www.researchgate.net/figure/GPS-accuracy-measurement_fig7_338799149)
 
-\[4.\] 
+\[4.\] [Wikipedia contributors (2025). "Circular error probable."](https://en.wikipedia.org/wiki/Circular_error_probable)
   
 ## Համակարգի բաղադրիչներ
 
