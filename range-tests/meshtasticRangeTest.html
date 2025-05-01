@@ -354,7 +354,7 @@ if (targetEl) {
       <td>12</td>
       <td>1100</td>
       <td>-96</td>
-      <td> + 9.75 </td>
+      <td> + 9.75 <-> 4.75 </td>
       <td> Շատ լաւ </td>
       <td>  - </td>
       <td>Երկրորդը սարքը տեղափոխուեց(նկ․ 8), մեծացնելով հեռաւորութիւնը եւ բարձրութիւնը, ինչը դրական ազդեց ազդանշանի ուժգնութեան վրայ</td>
@@ -380,8 +380,25 @@ Long_Moderate ռեժիմով 1000 մ հեռաւորութեան վրայ, ուղ
 
 <h3>Արդիւնքների ընդհանուր ամփոփում</h3>
 
+Տեսանելիութիւնը որոշիչ դեր ունի. նոյնիսկ քաղաքային միջավայրում, ուղիղ տեսանելիութիւնը զգալիաւրէն բարձրացնում է կապի որակը և հաղորդման հուսալիութիւնը։
+Չնայած դրան միջին (մինչեւ 500մ) հեռաւորութիւնների վրայ նոյնիսկ խոչընդոտներով եւ արգելքներով կապուղով հնարաւոր է տուեալներ փոխանցել։
+
+LoRa կարգավորումների ընտրութիւնը (ռադիո պարամետրերի փոփխութիւնը) թոյղ է տալիս հարմարուել միջավայրի փոփոխութիւններին․
+<ul>
+    <li>Long Fast ռեժիմը յարմար է միջին եւ հեռու, համեմատաբար քիչ արգելքներով տարածութիւններում, ստացման ուշացումը փոքր է։</li>
+
+  <li>  Long Slow՝ առաւել յուսալի է խիստ խոչընդոտուած միջավայրում, եւ բաց եւ հեռու տարածութիւններում, սակայն փոխարենը՝ ազդանշանը դանդաղ է (ունի աւելի մեծ ուշացում)։</li>
+
+  <li>  Long Moderate՝ միջին, հաւասարակշռուած տարբերակ, աւելի արագ է քան Long_Slow֊ն, բայց քիչ յուսալի արգելքների առկայութեան եւ հեռաւորութեան մեծացման պարագայում միեւնոյն ժամանակ Long_Fast֊ից աւելի մեծ հեռաւորութիւնների վրայ կարող է աւգտագործուել։</li>
+
+<li>Իսկ Medium_Fast եւ մնացած ռեժիմները համար են, մաւտ տարածութիւնների, արագ եւ համեմատաբար մեծածաւալ փաթեթների փոխանցման համար։</li>
+</ul>
+Հեռաւորութեան բարձրացմանը զուգընթաց, սարքերի բարձրութիււնների տարբերութիւնը (ինչպէս RT3-ում) կարող է նկատելիւարէն բարելաւել կապի որակը։
+<br><br>
+
+
 <b>Յաւելուած</b> 
-<p id="meshtastic-presets">Meshtastic֊ում LoRa կարգարկումների նախասահմանեալ արժեքներ</p>
+<p id="meshtastic-presets">Meshtastic֊ում LoRa կարգարկումների նախասահմանեալ արժեքները (ռեժիմներ) եւ դրանց համապատասխան ռադիո պարամատրերը</p>
 
 <table>
 <thead><tr><th style="text-align: center;">Radio Preset</th><th style="text-align: center;">Alt Preset Name</th><th style="text-align: center;">Data-Rate</th><th style="text-align: center;">SF / Symbols</th><th style="text-align: center;">Coding Rate</th><th style="text-align: center;">Bandwidth</th><th style="text-align: center;">Link Budget</th></tr></thead><tbody><tr><td style="text-align: center;">Short Range / Turbo</td><td style="text-align: center;">Short Turbo</td><td style="text-align: center;">21.88 kbps</td><td style="text-align: center;">7 / 128</td><td style="text-align: center;">4/5</td><td style="text-align: center;">500 kHz<sup></sup></td><td style="text-align: center;">140dB</td></tr><tr><td style="text-align: center;">Short Range / Fast</td><td style="text-align: center;">Short Fast</td><td style="text-align: center;">10.94 kbps</td><td style="text-align: center;">7 / 128</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">143dB</td></tr><tr><td style="text-align: center;">Short Range / Slow</td><td style="text-align: center;">Short Slow</td><td style="text-align: center;">6.25 kbps</td><td style="text-align: center;">8 / 256</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">145.5dB</td></tr><tr><td style="text-align: center;">Medium Range / Fast</td><td style="text-align: center;">Medium Fast</td><td style="text-align: center;">3.52 kbps</td><td style="text-align: center;">9 / 512</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">148dB</td></tr><tr><td style="text-align: center;">Medium Range / Slow</td><td style="text-align: center;">Medium Slow</td><td style="text-align: center;">1.95 kbps</td><td style="text-align: center;">10 / 1024</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">150.5dB</td></tr><tr><td style="text-align: center;">Long Range / Fast</td><td style="text-align: center;">Long Fast</td><td style="text-align: center;">1.07 kbps</td><td style="text-align: center;">11 / 2048</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">153dB</td></tr><tr><td style="text-align: center;">Long Range / Moderate</td><td style="text-align: center;">Long Moderate</td><td style="text-align: center;">0.34 kbps</td><td style="text-align: center;">11 / 2048</td><td style="text-align: center;">4/8</td><td style="text-align: center;">125 kHz</td><td style="text-align: center;">156dB</td></tr><tr><td style="text-align: center;">Long Range / Slow</td><td style="text-align: center;">Long Slow</td><td style="text-align: center;">0.18 kbps</td><td style="text-align: center;">12 / 4096</td><td style="text-align: center;">4/8</td><td style="text-align: center;">125 kHz</td><td style="text-align: center;">158.5dB</td></tr></tbody>
