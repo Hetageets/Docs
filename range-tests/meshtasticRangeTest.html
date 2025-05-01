@@ -1,6 +1,34 @@
+<script>
+let targetEl = document.getElementById("meshtastic-presets");
+
+function scrollToTable() {
+
+if (targetEl) {
+      let scrollCont = targetEl.parentNode;
+      while(scrollCont){
+           let overflowY = getComputedStyle(scrollCont). overflowY; 
+           let overflow = getComputedStyle(scrollCont). overflow;
+
+         if (overflowY === "auto" || overflowY === "scroll" || 
+             overflow === "auto" || overflow === "scroll" ) {
+         scrollCont.scrollTo({
+         top: targetEl.offsetTop - scrollCont.offsetTop,
+         behaviour: 'smooth' });
+
+         return;
+
+        }
+      scrollCont = scrollCont.parentNode;
+   }
+    
+}
+}
+</script>
+
+
 Հեռաւորութեան փորձեր իրականացնելու համար, տարբեր միջավայրերում, տարբեր հեռաւորութիւնների վրա, տարբեր LoRa կարգարկումներով, տարբեր տեսանելիութեան պայմաններում, երկու meshtastic firmware֊ով սարքերի միջեւ իրականացուել է տարբեր  ծաւալի տուեալների փոխանակում, ստորեւ ներկայացուած են բոլոր փորձերը մանրամասն աղիւսակներով։ 
 
-<h4 style="margin-bottom:10px"> Փորձ Ա</h4>
+<h3 style="margin-bottom:10px"> Փորձ Ա</h3>
 <p>Փորձի վերաբերեալ ընդհանուր տեղեկութիւն</p>
 <table>
   <thead>
@@ -35,7 +63,7 @@
   <thead>
     <tr>
       <th>Տուեալի համար</th>
-      <th><a href="#meshastic-presets" style="color:white;">LoRa կարգարկում*</a></th>
+      <th onclick="scrollToTable()"><u><b>LoRa կարգարկում*</u></b></th>
       <th> Փոխանցման հզորութիւն (dBm)</th>
       <th>Հեռաւորութիւն (մ)</th>
       <th>Ստացուած ազդանշանի ուժ (RSSI) (dBm)</th>
@@ -53,7 +81,7 @@
       <td>-119</td>
       <td>-9.75</td>
       <td>50</td>
-      <td>Տեսանելիութիւնը բացակայում է</td>
+      <td>Տեսանելիութիւնը բացակայում է, փաթեթները փոխանցուում են արագ, առանց դժվարութիւնների</td>
     </tr>
   </tbody>
 </table>
@@ -65,7 +93,7 @@
 <!-- ================================= -->
 <!-- ================================= -->
 
-<h4 style="margin-bottom:10px"> Փորձ Բ</h4>
+<h3 style="margin-bottom:10px"> Փորձ Բ</h3>
 <p>Փորձի վերաբերեալ ընդհանուր տեղեկութիւն</p>
 <table>
   <thead>
@@ -103,7 +131,7 @@
   <thead>
     <tr>
       <th>Տուեալի համար</th>
-      <th>LoRa կարգարկում</th>
+      <th onclick="scrollToTable()"><u><b>LoRa կարգարկում*</u></b></th>
       <th> Փոխանցման հզորութիւն (dBm)</th>
       <th>Հեռաւորութիւն (մ)</th>
       <th>Ստացուած ազդանշանի ուժ (RSSI) (dBm)</th>
@@ -170,7 +198,7 @@
       <td>Առաջին սարքը մի փոքր հեռացաւ (նկ․ 3), ազդանշանը վերջնական կայունացաւ </td>
     </tr>
 <tr>
-      <td>6</td>
+      <td>7</td>
       <td>Long Fast</td>
       <td>12</td>
       <td>490</td>
@@ -181,7 +209,7 @@
       <td>Առաջին սարքը անցաւ պատի հետեւը 2մ (նկ. 4), փոքր փաթեթները հասնում էին, իսկ երկարները երբեմն ընդ որում մեծ ուշացումով </td>
     </tr>
 <tr>
-      <td>6</td>
+      <td>8</td>
       <td>Long Slow</td>
       <td>12</td>
       <td>490</td>
@@ -192,7 +220,7 @@
       <td> Փոխուեց LoRa մոդը՝ Long Slow, եւ սարքը վերադարձաւ նկ. 3֊ի դիրք, ազդանշանը գերազանց, ստացման արագութիւնը դանդաղեց </td>
     </tr>
 <tr>
-      <td>6</td>
+      <td>9</td>
       <td>Long Slow</td>
       <td>12</td>
       <td>490</td>
@@ -229,9 +257,132 @@
 </figure>
 </div>
 
+
+<b>Եզրակացութիւն</b><br>
+400մ հեռաւորութեան վրայ, քաղաքային պայմաններում, տեսանելիութիւնը փակող արգելքների առկայութեան դէպքում Long_Fast ռեժիմով փոխանցուող փաթեթների մեծ մասը տեղ հասնում է, ստացուող ազդանշանը այդքան էլ ուժեղ չէ բայց բաւարար։ Փորձի ընթացքում մինչեւ 480 մ փաթեթները ուղղարկուցին/ընդունուեցին։ Կարճ հաղորդագրութիւնները հնարաւոր է նա եւ ուղղարկել աւելի  արգելապատ կապուղու պարագայում (նկ․ 4): 
+Փոխելով ռեժիմը Long_Slow, առաջին սարքի նկ․3 ի դիրքում ստացուող ազդանշանի զգալիաւրեն բարելաւուեց, բայց փաթեթների ուղարկման տեւողութիւնը մեծացաւ։ Այս ռեժիմը թոյղ տուեց էլ աւելի արգելապատ դիրքից (նկ․5) շատ կարճ փաթեթներ ուղղարկել, բայց ազդանշանը շատ թոյղ էր։
+
+<br><br>
+<!-- ================================= -->
+<!-- ================================= -->
+<!-- ================================= -->
+
+<h3 style="margin-bottom:10px"> Փորձ Գ</h3>
+<p>Փորձի վերաբերեալ ընդհանուր տեղեկութիւն</p>
+<table>
+  <thead>
+    <tr>
+      <th>Փորձի ID</th>
+      <th>Տարեթիւ</th>
+      <th>Ժամ</th>
+      <th>Եղանակ</th>
+      <th>Տեղանքի տեսակ</th>
+      <th>Բարձրութեան փոփոխութիւն</th>
+      <th>Նշումներ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>RT3</td>
+      <td>2025-04-30</td>
+      <td>13:00</td>
+      <td>Ամպամած</td>
+      <td>Քաղաքային, ուղիղ տեսանելիութեան առկայութիւն</td>
+      <td> 20մ </td>
+      <td>Միջին տարածութեան վրայ ուղիղ տեսանելիութեամբ փորձ, աստիճանաբար հեռաւորութիւնը մեծացնելով</td>
+    </tr>
+  </tbody>
+</table>
+
+<figure>
+  <img src="/db/get?id=a6c69646-851c-4da0-bfcc-9a584b7654b9-4730ad70-a3c1-41d9-bad4-7a1a0b7d3448" width=60% style="display:block; margin:auto; margin-top:0px;">
+  <figcaption style="font-size: 0.8em; word-wrap: break-word; text-align: center; max-width: 60%; margin:auto;"> Նկ․ 6: Երկու սարքերի նախատեսուած տեղադիրքը քարտեզի վրայ </figcaption>
+</figure>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Տուեալի համար</th>
+      <th onclick="scrollToTable()"><u><b>LoRa կարգարկում*</u></b></th>
+      <th> Փոխանցման հզորութիւն (dBm)</th>
+      <th>Հեռաւորութիւն (մ)</th>
+      <th>Ստացուած ազդանշանի ուժ (RSSI) (dBm)</th>
+      <th>Ազդանշան֊աղմուկ հարաբերութիւն (SNR) (dB)</th>
+      <th>Ազդանշանի գնահատական*</th>
+      <th>Ուշացում (մաւտարկուած)</th>
+      <th>Նշումներ</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Medium Fast</td>
+      <td>12</td>
+      <td>480մ</td>
+      <td>-106</td>
+      <td>-4.75</td>
+      <td> Լաւ </td>
+      <td> - </td>
+      <td> Մինչեւ 480մ հեռաւորութեան վրայ ազդանշանը լաւ/միջին էր, փաթեթները արագ էին հասնում։ </td>
+    </tr>
+<tr>
+      <td>2</td>
+      <td>Medium Fast</td>
+      <td>12</td>
+      <td>480+մ</td>
+      <td>-113</td>
+      <td>-8.75</td>
+      <td> Միջին </td>
+      <td> - </td>
+      <td> Նամակները փոխանցուում/ստացուում են, բայց որբեմն չեն հասնում, ազդանշանը աւելի թոյղ է։ Տեսանելիութիւնը մասամբ փակ էր </td>
+    </tr>
+<tr>
+      <td>3</td>
+      <td>Long Moderate</td>
+      <td>12</td>
+      <td>1000 մ</td>
+      <td>-110</td>
+      <td>-1.75</td>
+      <td> Լաւ </td>
+      <td> - </td>
+      <td> Ռեժիմը փոխուեց Long_Moderate, որով սարքերը նախատեսուած հեռաւորութեան վրայ հանգիստ փոխանակուում էին փաթեթներով </td>
+    </tr>
+<tr>
+      <td>4</td>
+      <td>Long Moderate</td>
+      <td>12</td>
+      <td>1100</td>
+      <td>-96</td>
+      <td> + 9.75 </td>
+      <td> Շատ լաւ </td>
+      <td>  - </td>
+      <td>Երկրորդը սարքը տեղափոխուեց(նկ․ 8), մեծացնելով հեռաւորութիւնը եւ բարձրութիւնը, ինչը դրական ազդեց ազդանշանի ուժգնութեան վրայ</td>
+    </tr>
+</tbody>
+</table>
+
+<figure>
+  <img src="/db/get?id=28f54b6f-7af4-4d0a-992b-e2830daf1c1a-b3200963-0a4f-47f5-9e92-c557c8b4152e" width=60% style="display:block; margin:auto; margin-top:0px;">
+  <figcaption style="font-size: 0.8em; word-wrap: break-word; text-align: center; max-width: 60%; margin:auto;"> Նկ․ 7: Առաջին սարքի սահմանային հեռաւորութեան դիրքը Medium_fast ռեժիմով աշխատանքի համար </figcaption>
+</figure>
+
+<figure>
+  <img src="/db/get?id=c29955e9-15c9-43e0-aba0-8e17ebbb94fb-c0897fc9-7da1-4391-ac27-4a8f34f97875" width=60% style="display:block; margin:auto; margin-top:0px;">
+  <figcaption style="font-size: 0.8em; word-wrap: break-word; text-align: center; max-width: 60%; margin:auto;"> Նկ․ 8: Առաւելագոյն փորձի հեռաւորութիւն, Long Moderate ռեժիմով </figcaption>
+</figure>
+
+<b>Եզրակացութիւն</b>
+<p>
+Medium_fast եղանակով ուղիղ տեսանելիութեան պայմաններում մինչեւ 480մ փաթեթները արագ եւ առանց խնդիրների փոխանցուում/ստացուում են։ Հեռաւորութիւնը մեծեցնելուն պես տեսանելիութիւնը մասնակի փակուեց, եւ փաթեթների մի մասն էր հասնում։
+Long_Moderate ռեժիմով 1000 մ հեռաւորութեան վրայ, ուղիղ տեսանելիութեան եւ մաւտ 20մ ընդունիչների բարձրութիւնների տարբերութեան պարագայում ազդանշանի ուժգնութիւնը լաւ էր, իսկ փորձի ընթացքում առաւելոգոյն՝ 1100մ հեռաւորութեան եւ 36մ բարձրութիւնների տարբերութեան պարագայում էլ աւելի լաւ։ 
+</p>
+
+<h3>Արդիւնքների ընդհանուր ամփոփում</h3>
+
 <b>Յաւելուած</b> 
 <p id="meshtastic-presets">Meshtastic֊ում LoRa կարգարկումների նախասահմանեալ արժեքներ</p>
 
 <table>
-<thead><tr><th style="text-align: center;">Radio Preset</th><th style="text-align: center;">Alt Preset Name</th><th style="text-align: center;">Data-Rate</th><th style="text-align: center;">SF / Symbols</th><th style="text-align: center;">Coding Rate</th><th style="text-align: center;">Bandwidth</th><th style="text-align: center;">Link Budget</th></tr></thead><tbody><tr><td style="text-align: center;">Short Range / Turbo</td><td style="text-align: center;">Short Turbo</td><td style="text-align: center;">21.88 kbps</td><td style="text-align: center;">7 / 128</td><td style="text-align: center;">4/5</td><td style="text-align: center;">500 kHz<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref="true" aria-describedby="footnote-label">1</a></sup></td><td style="text-align: center;">140dB</td></tr><tr><td style="text-align: center;">Short Range / Fast</td><td style="text-align: center;">Short Fast</td><td style="text-align: center;">10.94 kbps</td><td style="text-align: center;">7 / 128</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">143dB</td></tr><tr><td style="text-align: center;">Short Range / Slow</td><td style="text-align: center;">Short Slow</td><td style="text-align: center;">6.25 kbps</td><td style="text-align: center;">8 / 256</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">145.5dB</td></tr><tr><td style="text-align: center;">Medium Range / Fast</td><td style="text-align: center;">Medium Fast</td><td style="text-align: center;">3.52 kbps</td><td style="text-align: center;">9 / 512</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">148dB</td></tr><tr><td style="text-align: center;">Medium Range / Slow</td><td style="text-align: center;">Medium Slow</td><td style="text-align: center;">1.95 kbps</td><td style="text-align: center;">10 / 1024</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">150.5dB</td></tr><tr><td style="text-align: center;">Long Range / Fast</td><td style="text-align: center;">Long Fast</td><td style="text-align: center;">1.07 kbps</td><td style="text-align: center;">11 / 2048</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">153dB</td></tr><tr><td style="text-align: center;">Long Range / Moderate</td><td style="text-align: center;">Long Moderate</td><td style="text-align: center;">0.34 kbps</td><td style="text-align: center;">11 / 2048</td><td style="text-align: center;">4/8</td><td style="text-align: center;">125 kHz</td><td style="text-align: center;">156dB</td></tr><tr><td style="text-align: center;">Long Range / Slow</td><td style="text-align: center;">Long Slow</td><td style="text-align: center;">0.18 kbps</td><td style="text-align: center;">12 / 4096</td><td style="text-align: center;">4/8</td><td style="text-align: center;">125 kHz</td><td style="text-align: center;">158.5dB</td></tr></tbody>
+<thead><tr><th style="text-align: center;">Radio Preset</th><th style="text-align: center;">Alt Preset Name</th><th style="text-align: center;">Data-Rate</th><th style="text-align: center;">SF / Symbols</th><th style="text-align: center;">Coding Rate</th><th style="text-align: center;">Bandwidth</th><th style="text-align: center;">Link Budget</th></tr></thead><tbody><tr><td style="text-align: center;">Short Range / Turbo</td><td style="text-align: center;">Short Turbo</td><td style="text-align: center;">21.88 kbps</td><td style="text-align: center;">7 / 128</td><td style="text-align: center;">4/5</td><td style="text-align: center;">500 kHz<sup></sup></td><td style="text-align: center;">140dB</td></tr><tr><td style="text-align: center;">Short Range / Fast</td><td style="text-align: center;">Short Fast</td><td style="text-align: center;">10.94 kbps</td><td style="text-align: center;">7 / 128</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">143dB</td></tr><tr><td style="text-align: center;">Short Range / Slow</td><td style="text-align: center;">Short Slow</td><td style="text-align: center;">6.25 kbps</td><td style="text-align: center;">8 / 256</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">145.5dB</td></tr><tr><td style="text-align: center;">Medium Range / Fast</td><td style="text-align: center;">Medium Fast</td><td style="text-align: center;">3.52 kbps</td><td style="text-align: center;">9 / 512</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">148dB</td></tr><tr><td style="text-align: center;">Medium Range / Slow</td><td style="text-align: center;">Medium Slow</td><td style="text-align: center;">1.95 kbps</td><td style="text-align: center;">10 / 1024</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">150.5dB</td></tr><tr><td style="text-align: center;">Long Range / Fast</td><td style="text-align: center;">Long Fast</td><td style="text-align: center;">1.07 kbps</td><td style="text-align: center;">11 / 2048</td><td style="text-align: center;">4/5</td><td style="text-align: center;">250 kHz</td><td style="text-align: center;">153dB</td></tr><tr><td style="text-align: center;">Long Range / Moderate</td><td style="text-align: center;">Long Moderate</td><td style="text-align: center;">0.34 kbps</td><td style="text-align: center;">11 / 2048</td><td style="text-align: center;">4/8</td><td style="text-align: center;">125 kHz</td><td style="text-align: center;">156dB</td></tr><tr><td style="text-align: center;">Long Range / Slow</td><td style="text-align: center;">Long Slow</td><td style="text-align: center;">0.18 kbps</td><td style="text-align: center;">12 / 4096</td><td style="text-align: center;">4/8</td><td style="text-align: center;">125 kHz</td><td style="text-align: center;">158.5dB</td></tr></tbody>
 </table>
